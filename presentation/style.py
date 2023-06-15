@@ -288,7 +288,7 @@ class HTMLStyler:
                 <h3>2.2 Feature Scaling</h3>
                 <h4>standardize</h4>
                 <article>
-                    <img src="./images/transform.png" alt="z-transformation" height=90 width=220>
+                    <img src="./images/transform.png" alt="z-transformation" height=90 width=200>
                 </article>
                 <h4>normalize</h4>
                 <article>
@@ -374,7 +374,12 @@ class HTMLStyler:
         """
         self.box25 = """
         <div class="styled-div">
-        <h3>Ensemble learning with Further Tweaks</h3>
+            <h3>Ensemble learning without Further Tweaks</h3>
+        <div>
+        """
+        self.box26 = """
+        <div class="styled-div">
+            <h3>Ensemble learning with Further Tweaks</h3>
         <div>
         """
 
@@ -432,6 +437,8 @@ class HTMLStyler:
                 display(HTML(self.css + self.box23))
             case 24:
                 display(HTML(self.css + self.box24))
+            case 25:
+                display(HTML(self.css + self.box25))
             case 25:
                 display(HTML(self.css + self.box25))
             case _:
