@@ -102,9 +102,9 @@ def map_plot(data: pd.DataFrame):
         colorbar=True,
     )
     plt.scatter(x=[-118], y=[34], marker=",", label="Los Angeles",
-                s=100, c="white")
+                s=100, c="black")
     plt.scatter(x=[-122], y=[37], marker="^", label="San Francisco",
-                s=100, c="white")
+                s=100, c="black")
     plt.legend()
     plt.show()
 
@@ -114,7 +114,7 @@ def highlight_desc(desc: pd.DataFrame):
 
 
 def highlight_corr(corr: pd.DataFrame):
-    return "background-color: red" if abs(corr) > 0.7 else None
+    return "background-color: red" if abs(corr) > 0.7 and abs(corr) < 1 else None
 
 
 def lin_plot(x, y, y_pred, x_test):
@@ -122,7 +122,7 @@ def lin_plot(x, y, y_pred, x_test):
     num_colors = 8
     colors = [cmap(i / num_colors) for i in range(num_colors)]
     fig, ax = plt.subplots(1, 1)
-    ax.scatter(x=x[:, 0], y=y, color=colors[3], s=0.1, alpha=0.5)
+    ax.scatter(x=x[:, 0], y=y, color=colors[1], s=0.1, alpha=0.5)
     ax.set_xlabel("MeanInc")
     ax.set_ylabel("MedHouseVal")
     ax.plot(x_test, y_pred, color=colors[7],  alpha=1, linewidth=2)

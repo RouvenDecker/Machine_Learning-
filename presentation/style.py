@@ -124,27 +124,19 @@ class HTMLStyler:
         """
         self.box0 = """
         <div class="styled-div">
-            <h1> Machine learning Workflow </h1>
-            <article>
-                <ol>
-                    <li>Data Exploration</li>
-                    <li>Data Preprocessing</li>
-                    <li>Modeling</li>
-                </ol>
-            </article>
-        <div>
-        """
-        self.box1 = """
-        <div class="styled-div">
         <h2>Datastructure in Supervised Learning</h2>
         <article>
-            <p>statistical unit: person</p>
+            <p>
+                numeric Targets: <strong>Regression</strong><br>
+                categorical Targets: <strong>classification</strong><br>
+                statistical unit: House<br>
+            </p>
             <img src="./images/table-img.png" alt="example_table">
             <p class="tiny"><em>source: own</em></p>
         </article>
         </div>
         """
-        self.box2 = """
+        self.box1 = """
         <div class="styled-div">
         <article>
             <img src="./images/modell-fit.webp" alt="model-fitting">
@@ -156,14 +148,28 @@ class HTMLStyler:
         </article>
         </div>
         """
+        self.box2 = """
+        <div class="styled-div">
+            <h1> Machine learning Workflow </h1>
+            <article>
+                <ol>
+                    <li>Data Exploration</li>
+                    <li>Data Preprocessing</li>
+                    <li>Modeling</li>
+                </ol>
+            </article>
+        <div>
+        """
+
+
         self.box3 = '''
         <div class= "styled-div">
             <h2>1. Data Exploration </h2>
             <article>
                 <ol>
                     <li class="applied">Data Load</li>
-                    <li class="applied">Exploratory Data Analysis</li>
-                    <li class="applied">Visualization</li>
+                    <li class="applied">Visualisation</li>
+                    <li class="not-applied">basic statistics</li>
                     <li class="not-applied">Outlier Identification</li>
                     <li class="not-applied">Feature Engineering</li>
                 </ol>
@@ -235,7 +241,7 @@ class HTMLStyler:
         """
         self.box8 = """
         <div class="styled-div">
-                <h3>1.2 Explorative Data Analysis</h3>
+                <h3>1.2 Visualisation</h3>
         </div>
         """
         self.box9 = """
@@ -265,7 +271,7 @@ class HTMLStyler:
             <h2>2. Data Preperation</h2>
             <article>
                 <ol>
-                    <li class ="applied">Data Cleansing</li>
+                    <li class ="not-applied">Data Cleansing</li>
                     <li class ="applied">Feature Scaling</li>
                     <li class ="applied">Train-Test-split</li>
                     <li class ="not-applied">Encoding</li>
@@ -290,10 +296,6 @@ class HTMLStyler:
                 <article>
                     <img src="./images/transform.png" alt="z-transformation" height=90 width=200>
                 </article>
-                <h4>normalize</h4>
-                <article>
-                    <img src="./images/MinMax.png" alt="Normalize" height=90 width=250>
-                </article>
         </div>"""
 
         self.box15 = """
@@ -306,10 +308,10 @@ class HTMLStyler:
             <h2>Model Building</h2>
             <article>
             <ol>
-                <li class ="applied">baseline modell</li>
-                <li class ="applied">scoring</li>
-                <li class ="applied">hyperparameters</li>
-                <li class ="not-applied">crossvalidation</li>
+                <li class ="applied">Baselineing</li>
+                <li class ="applied">Searching Hyperparameters</li>
+                <li class ="applied">Scoring</li>
+                <li class ="not-applied">Crossvalidation</li>
                 <li class ="applied">retrain on complete dataset</li>
                 <li class ="not-applied">tweak model/hypers until wanted perfromance reached</li>
             </article>
