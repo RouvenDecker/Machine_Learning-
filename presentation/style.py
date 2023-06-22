@@ -30,7 +30,7 @@ class HTMLStyler:
                 }
 
                 li{
-                    font-size: 25px;
+                    font-size: 27px;
                     width:700px;
                     font-weight:500;
                 }
@@ -117,78 +117,79 @@ class HTMLStyler:
 
             </style>
         '''
-        self.box_1 = """
+        self.box0 = """
         <div class="styled-div">
     	    <img src="./images/ml_pic.svg">
         <div>
         """
-        self.box0 = """
-        <div class="styled-div">
-        <h2>Datastructure in Supervised Learning</h2>
-        <article>
-            <p>
-                numeric Targets: <strong>Regression</strong><br>
-                categorical Targets: <strong>classification</strong><br>
-                statistical unit: House<br>
-            </p>
-            <img src="./images/table-img.png" alt="example_table">
-            <p class="tiny"><em>source: own</em></p>
-        </article>
-        </div>
-        """
         self.box1 = """
         <div class="styled-div">
-        <article>
-            <img src="./images/modell-fit.webp" alt="model-fitting">
-            <p> source:
-                <a class="tiny" href="https://www.fastaireference.com/overfitting">
-                    www.fastaireference.com
-                </a>
-            </p>
-        </article>
+        <h2>Datastructure in Supervised Learning</h2>
+            <article>
+                <p>
+                    numerical target: <strong>regression</strong><br>
+                    categorical target: <strong>classification</strong><br>
+                </p>
+                <img src="./images/table-img.png" alt="example_table">
+                <p class="tiny"><em>source: own</em></p>
+            </article>
         </div>
         """
         self.box2 = """
         <div class="styled-div">
-            <h1> Machine learning Workflow </h1>
+            <article>
+                <img src="./images/modell-fit.webp" alt="model-fitting">
+                <p> source:
+                    <a class="tiny" href="https://www.fastaireference.com/overfitting">
+                        www.fastaireference.com
+                    </a>
+                </p>
+            </article>
+        </div>
+        """
+        self.box3 = """
+        <div class="styled-div">
+            <h1> Machine Learning Workflow </h1>
             <article>
                 <ol>
-                    <li>Data Exploration</li>
-                    <li>Data Preprocessing</li>
-                    <li>Modeling</li>
+                    <li>data exploration</li>
+                    <li>data preperation</li>
+                    <li>model building</li>
                 </ol>
             </article>
         <div>
         """
 
 
-        self.box3 = '''
+        self.box4 = '''
         <div class= "styled-div">
             <h2>1. Data Exploration </h2>
             <article>
                 <ol>
-                    <li class="applied">Data Load</li>
-                    <li class="applied">Visualisation</li>
-                    <li class="not-applied">basic statistics</li>
-                    <li class="not-applied">Outlier Identification</li>
-                    <li class="not-applied">Feature Engineering</li>
+                    <li class="applied">import dataset</li>
+                    <li class="applied">data visualisation</li>
+                    <li class="not-applied">statistics</li>
+                    <li class="not-applied">outlier identification</li>
+                    <li class="not-applied">feature engineering</li>
                 </ol>
             </article>
         </div>
         '''
-        self.box4 = """
+        self.box5 = """
         <div class="styled-div">
             <h3>1.1 Data Load</h3>
         </div>
         """
-        self.box5 = """
+        self.box6 = """
         <div class="styled-div">
-            <h3>Block Groups</h3>
+            <h3>block groups</h3>
                 <article>
                     <p>
                         Block Groups (BGs) are statistical divisions of census tracts,
-                        are defined to contain <strong> between 600 and 3,000 people</strong><br>
-                        <a href='https://www.census.gov/programs-surveys/geography/about/glossary.html#par_textimage_4' title="Data Source">
+                        which are defined to contain <strong> between 600 and 3,000 people</strong><br>
+                        <a href='https://www.census.gov/programs-surveys/
+                            geography/about/glossary.html#par_textimage_4'
+                            title="Data Source">
                             [United States Census Bureau]
                         </a>
                     </p>
@@ -196,7 +197,7 @@ class HTMLStyler:
                 </article>
         </div>
         """
-        self.box6 = """
+        self.box7 = """
         <div class="styled-div">
         <h3>Dataset Characteristics</h3>
             <article>
@@ -225,7 +226,7 @@ class HTMLStyler:
             </article>
         <div>
         """
-        self.box7 = """
+        self.box8 = """
         <div class="styled-div">
             <h3>Target Description</h3>
             <article>
@@ -239,12 +240,12 @@ class HTMLStyler:
             </article>
         </div>
         """
-        self.box8 = """
+        self.box9 = """
         <div class="styled-div">
                 <h3>1.2 Visualisation</h3>
         </div>
         """
-        self.box9 = """
+        self.box10 = """
         <div class="styled-div">
             <h3>Correlation</h3>
                 <article>
@@ -256,30 +257,29 @@ class HTMLStyler:
                 </article>
         </div>
         """
-        self.box10 = """
+        self.box11 = """
         <div class="styled-div">
             <h4>checking for bad correlation</h4>
         </div>
         """
-        self.box11 = """
+        self.box12 = """
         <div class="styled-div">
             <h4>checking for good correlation</h4>
         </div>
         """
-        self.box12 = """
+        self.box13 = """
         <div class="styled-div">
             <h2>2. Data Preperation</h2>
             <article>
                 <ol>
-                    <li class ="not-applied">Data Cleansing</li>
-                    <li class ="applied">Feature Scaling</li>
-                    <li class ="applied">Train-Test-split</li>
-                    <li class ="not-applied">Encoding</li>
+                    <li class ="not-applied">data cleansing</li>
+                    <li class ="applied">feature scaling</li>
+                    <li class ="applied">train-test-split</li>
                 </ol>
             </article>
         </div>
         """
-        self.box13 = """
+        self.box14 = """
         <div class="styled-div">
             <h3>2.1 Data Cleansing</h3>
             <article>
@@ -289,41 +289,44 @@ class HTMLStyler:
             </article>
         </div>
         """
-        self.box14 = """
+        self.box15 = """
         <div class="styled-div">
                 <h3>2.2 Feature Scaling</h3>
                 <h4>standardize</h4>
                 <article>
-                    <img src="./images/transform.png" alt="z-transformation" height=90 width=200>
+                    <img src="./images/transform.png"
+                    alt="z-transformation" height=90 width=200>
                 </article>
         </div>"""
 
-        self.box15 = """
+        self.box16 = """
         <div class="styled-div">
             <h3>2.3 Train-Test-split </h3>
         </div>
         """
-        self.box16 = """
+        self.box17 = """
         <div class="styled-div">
-            <h2>Model Building</h2>
+            <h2>Modeling</h2>
             <article>
             <ol>
-                <li class ="applied">Baselineing</li>
-                <li class ="applied">Searching Hyperparameters</li>
-                <li class ="applied">Scoring</li>
-                <li class ="not-applied">Crossvalidation</li>
-                <li class ="applied">retrain on complete dataset</li>
-                <li class ="not-applied">tweak model/hypers until wanted perfromance reached</li>
+                <li class ="not-applied">build a baseline</li>
+                <li class ="applied">scoring</li>
+                <li class ="applied">choose a model</li>
+                <li class ="not-applied">search hyperparameters</li>
+                <li class ="not-applied">crossvalidation</li>
+
+                <li class ="not-applied">change model, retrain,
+                compare performances</li>
             </article>
             </ol>
         </div>
         """
-        self.box17 = """
+        self.box18 = """
         <div class="styled-div">
-            <h3>1. baseline model </h3>
+            <h3>1. Baseline</h3>
         </div>
         """
-        self.box18 = """
+        self.box19 = """
         <div class="styled-div">
           <h2>2. Scoring (metrics)</h2>
             <article>
@@ -344,42 +347,42 @@ class HTMLStyler:
             </article>
         </div>
         """
-        self.box19 = """
+        self.box20 = """
         <div class="styled-div">
         <h4>linear Regression score (1 Feature)</h4>
         <div>
         """
-        self.box20 = """
+        self.box21 = """
         <div class="styled-div">
         <h4>linear Regression score (8 Features)</h4>
         <div>
         """
-        self.box21 = """
-        <div class="styled-div">
-        <h4>Decission Tree Regressor Score(8 Features)</h4>
-        <div>
-        """
         self.box22 = """
         <div class="styled-div">
-        <h3>Exporting the model</h3>
+        <h4>Decission Tree Regressor (8 Features)</h4>
         <div>
         """
         self.box23 = """
         <div class="styled-div">
-        <h4>save</h4>
+        <h3>Exporting the model</h3>
         <div>
         """
         self.box24 = """
         <div class="styled-div">
-        <h4>load</h4>
+        <h4>save</h4>
         <div>
         """
         self.box25 = """
         <div class="styled-div">
-            <h3>Ensemble learning without Further Tweaks</h3>
+        <h4>load</h4>
         <div>
         """
         self.box26 = """
+        <div class="styled-div">
+            <h3>Ensemble learning without Further Tweaks</h3>
+        <div>
+        """
+        self.box27 = """
         <div class="styled-div">
             <h3>Ensemble learning with Further Tweaks</h3>
         <div>
@@ -387,8 +390,6 @@ class HTMLStyler:
 
     def exec_styled_cell(self, number) -> None:
         match number:
-            case -1:
-                display(HTML(self.css + self.box_1))
             case 0:
                 display(HTML(self.css + self.box0))
             case 1:
@@ -441,7 +442,9 @@ class HTMLStyler:
                 display(HTML(self.css + self.box24))
             case 25:
                 display(HTML(self.css + self.box25))
-            case 25:
-                display(HTML(self.css + self.box25))
+            case 26:
+                display(HTML(self.css + self.box26))
+            case 27:
+                display(HTML(self.css + self.box27))
             case _:
                 print("invalid")

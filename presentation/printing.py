@@ -122,10 +122,12 @@ def lin_plot(x, y, y_pred, x_test):
     num_colors = 8
     colors = [cmap(i / num_colors) for i in range(num_colors)]
     fig, ax = plt.subplots(1, 1)
-    ax.scatter(x=x[:, 0], y=y, color=colors[1], s=0.1, alpha=0.5)
-    ax.set_xlabel("MeanInc")
+    ax.scatter(x=x[:, 0], y=y, color=colors[1], s=1, alpha=0.5)
+    ax.set_xlabel("MedInc")
     ax.set_ylabel("MedHouseVal")
     ax.plot(x_test, y_pred, color=colors[7],  alpha=1, linewidth=2)
+    ax.set_xlim(-2,4)
+    ax.set_ylim(0,5.2)
     plt.show()
 
 
