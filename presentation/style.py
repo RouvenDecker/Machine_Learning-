@@ -10,7 +10,7 @@ class HTMLStyler:
                     color: green;
                 }
                 .not-applied{
-                    color:red;
+                    color: rgba(102, 75, 98, 0.5);;
                 }
 
                 div.styled-div{
@@ -205,24 +205,9 @@ class HTMLStyler:
                     <p>Features: 8 numeric </p>
                     <p>Targets: 1 numeric (MedHouseVal)</p>
                     <p>Missing Values: 0</p>
-            </article>
-                <h4>Attribute Information</h4>
-            <article>
-                <ul>
-                    <li><strong>MedInc</strong> median income in block group</li>
-                    <li><strong>HouseAge</strong> median house age in block group</li>
-                    <li><strong>AveRooms</strong>  average number of rooms per household</li>
-                    <li><strong>AveBedrms</strong> average number of bedrooms per household</li>
-                    <li><strong>Population</strong> block group population</li>
-                    <li><strong>AveOccup</strong> average number of household members</li>
-                    <li><strong>Latitude</strong>  block group latitude</li>
-                    <li><strong>Longitude</strong> block group longitude</li>
-                </ul>
-                <p>
                     <a href='https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html' title='Datasource'>
                          [www.dcc.fc.up.pt]
                     </a>
-                </p>
             </article>
         <div>
         """
@@ -273,7 +258,7 @@ class HTMLStyler:
             <article>
                 <ol>
                     <li class ="not-applied">data cleansing</li>
-                    <li class ="applied">feature scaling</li>
+                    <li class ="not-applied">feature scaling</li>
                     <li class ="applied">train-test-split</li>
                 </ol>
             </article>
@@ -364,25 +349,49 @@ class HTMLStyler:
         """
         self.box23 = """
         <div class="styled-div">
-        <h3>Exporting the model</h3>
+            <h3>GraphvizTreePlot</h3>
         <div>
         """
         self.box24 = """
         <div class="styled-div">
-        <h4>save</h4>
+        <h3>Exporting the model</h3>
         <div>
         """
         self.box25 = """
         <div class="styled-div">
-        <h4>load</h4>
+        <h4>save</h4>
         <div>
         """
         self.box26 = """
         <div class="styled-div">
+        <h4>load</h4>
+        <div>
+        """
+        self.box27 ="""
+        <div class="styled-div">
+            <h3>Book Sources</h3>
+            <article>
+                <h4>practice</h4>
+                <p>
+                    Aurélien Gèron - Hands-on Machine Learning
+                    with Scikit-Learn,
+                    Keras & Tensorflow
+                </p>
+                <h4>theory</h4>
+                <p>
+                    Trevor Hastie, Robert Tibshirani, Jerome Friedman
+                    - The Elements of Statistical Learning (Data Mining,
+                    Inference, and Prediction)
+                </p>
+            </article
+        <div>
+        """
+        self.box28 = """
+        <div class="styled-div">
             <h3>Ensemble learning without Further Tweaks</h3>
         <div>
         """
-        self.box27 = """
+        self.box28 = """
         <div class="styled-div">
             <h3>Ensemble learning with Further Tweaks</h3>
         <div>
@@ -446,5 +455,7 @@ class HTMLStyler:
                 display(HTML(self.css + self.box26))
             case 27:
                 display(HTML(self.css + self.box27))
+            case 28:
+                display(HTML(self.css + self.box28))
             case _:
                 print("invalid")

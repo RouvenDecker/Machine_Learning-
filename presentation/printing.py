@@ -58,7 +58,7 @@ def scatter_2d_dataset(x: np.ndarray,
             ax[i].tick_params(axis='x', labelrotation=45)
         ax[i].set_title(titles[i])
         ax[i].scatter(x=clean[i][1], y=clean[i][0],
-                      color=colors[i], s=0.1, alpha=alpha)
+                      color=colors[i], s=0.3, alpha=alpha)
     plt.show()
 
 
