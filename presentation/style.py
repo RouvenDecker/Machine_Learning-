@@ -257,7 +257,7 @@ class HTMLStyler:
             <h2>2. Data Preperation</h2>
             <article>
                 <ol>
-                    <li class ="not-applied">data cleansing</li>
+                    <li class ="applied">data cleansing</li>
                     <li class ="not-applied">feature scaling</li>
                     <li class ="applied">train-test-split</li>
                 </ol>
@@ -266,10 +266,10 @@ class HTMLStyler:
         """
         self.box14 = """
         <div class="styled-div">
-            <h3>2.1 Data Cleansing</h3>
+            <h3>data cleansing</h3>
             <article>
                 <p>
-                    handle missing values (drop or impute)
+                    remove dataquirks
                 </p>
             </article>
         </div>

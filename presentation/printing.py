@@ -26,7 +26,7 @@ def scatter_2d_dataset(x: np.ndarray,
                        estimator=None) -> None:
 
     titles = naming
-    cmap = plt.cm.get_cmap('jet')
+    cmap = plt.cm.get_cmap('plasma')
     num_colors = len(naming)
     colors = [cmap(i / num_colors) for i in range(num_colors)]
 
@@ -58,7 +58,7 @@ def scatter_2d_dataset(x: np.ndarray,
             ax[i].tick_params(axis='x', labelrotation=45)
         ax[i].set_title(titles[i])
         ax[i].scatter(x=clean[i][1], y=clean[i][0],
-                      color=colors[i], s=0.3, alpha=alpha)
+                      color=colors[i], s=0.15, alpha=alpha)
     plt.show()
 
 
@@ -84,7 +84,7 @@ def hist_2d_dataset(x: np.ndarray,
             ax[i].set_xticks([lowest, mean, highest], rotation=45)
             ax[i].tick_params(axis='x', labelrotation=45)
         ax[i].set_title(titles[i])
-        ax[i].hist2d(x_clean, y_clean, bins=bins, density=True, cmap="jet")
+        ax[i].hist2d(x_clean, y_clean, bins=bins, density=True, cmap="plasma")
 
 
 def map_plot(data: pd.DataFrame):
@@ -98,7 +98,7 @@ def map_plot(data: pd.DataFrame):
         label="Population",
         figsize=(10, 7),
         c="MedHouseVal",
-        cmap=plt.get_cmap("jet"),
+        cmap=plt.get_cmap("plasma"),
         colorbar=True,
     )
     plt.scatter(x=[-118], y=[34], marker=",", label="Los Angeles",
@@ -118,7 +118,7 @@ def highlight_corr(corr: pd.DataFrame):
 
 
 def lin_plot(x, y, y_pred, x_test):
-    cmap = plt.cm.get_cmap('jet')
+    cmap = plt.cm.get_cmap('plasma')
     num_colors = 8
     colors = [cmap(i / num_colors) for i in range(num_colors)]
     fig, ax = plt.subplots(1, 1)
