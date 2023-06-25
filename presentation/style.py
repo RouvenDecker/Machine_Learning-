@@ -114,7 +114,9 @@ class HTMLStyler:
                 tiny{
                     font-size:20px;
                 }
-
+                .highlighted{
+                    font-size:30px;
+                }
             </style>
         '''
         self.box0 = """
@@ -152,9 +154,9 @@ class HTMLStyler:
             <h1> Machine Learning Workflow </h1>
             <article>
                 <ol>
-                    <li>data exploration</li>
-                    <li>data preperation</li>
-                    <li>model building</li>
+                    <li class="highlighted">data exploration</li>
+                    <li class="highlighted">data preperation</li>
+                    <li class="highlighted">model building</li>
                 </ol>
             </article>
         <div>
@@ -189,8 +191,7 @@ class HTMLStyler:
                         which are defined to contain <strong> between 600 and 3,000 people</strong><br>
                         <a href='https://www.census.gov/programs-surveys/
                             geography/about/glossary.html#par_textimage_4'
-                            title="Data Source">
-                            [United States Census Bureau]
+                            title="Data Source">[United States Census Bureau]
                         </a>
                     </p>
 
@@ -205,9 +206,11 @@ class HTMLStyler:
                     <p>Features: 8 numeric </p>
                     <p>Targets: 1 numeric (MedHouseVal)</p>
                     <p>Missing Values: 0</p>
-                    <a href='https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html' title='Datasource'>
-                         [www.dcc.fc.up.pt]
-                    </a>
+                    <p>
+                        <a href='https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html' title='Datasource'>
+                             [www.dcc.fc.up.pt]
+                        </a>
+                    </p>
             </article>
         <div>
         """
@@ -267,11 +270,6 @@ class HTMLStyler:
         self.box14 = """
         <div class="styled-div">
             <h3>data cleansing</h3>
-            <article>
-                <p>
-                    remove dataquirks
-                </p>
-            </article>
         </div>
         """
         self.box15 = """
